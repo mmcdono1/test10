@@ -39,13 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    'allauth',
+    'allauth',  # Kerry thinks this is wrong
     'allauth.account',
     'allauth.socialaccount',
 
     'rest_framework',
 
     'webpack_loader',
+
+    'poker_logic'
 
 ]
 

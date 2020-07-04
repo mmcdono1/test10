@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path, include, re_path
-from core.views import IndexTemplateView
+from poker_logic.views.core import IndexTemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
