@@ -1,4 +1,5 @@
 from django.db import models
+from rest_framework import serializers
 
 
 class Track_headings(models.Model):
@@ -43,3 +44,12 @@ class Core_topics(models.Model):
 class Play_modes(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=500)
+
+class TrackHeadingsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Track_headings
+        fields = [
+            'id',
+            'track_title',
+            'track_description'
+        ]

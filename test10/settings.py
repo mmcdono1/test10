@@ -170,3 +170,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "frontend/dist"),
     # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
 )
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#     )
+# }
