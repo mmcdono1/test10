@@ -9,8 +9,16 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+        player_data: {player_id: '', session_id: '', username: ''},
+        track_headings: [],
+
   },
   mutations: {
+        mutate_track_headings: function(state, payload) {
+      state.track_headings = payload.track_headings
+      state.player_data.username = payload.username
+                },
+
   },
   actions: {
      // *** Ajax query to update tracks data *** //
@@ -23,7 +31,7 @@ export default new Vuex.Store({
           'Content-Type': 'application/json',
         },
         data: {
-          session_id: context.state.player_data.session_id,
+          // session_id: context.state.player_data.session_id,
           track_id
         }
        })
